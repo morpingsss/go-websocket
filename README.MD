@@ -69,7 +69,9 @@ CGO_ENABLED=0 GOOS=darwin GOARCH=amd64 go build
 
 **连接测试：**
 
-打开支持Websocket的客户端，输入 `ws://127.0.0.1:7800/ws?systemId=xxx` 进行连接，连接成功会返回`clientId`。
+编辑hosts文件  120.79.131.10 websocket.example.com
+
+打开支持Websocket的客户端，输入 `ws://websocket.example.com/ws?systemId=xxx` 进行连接，连接成功会返回`clientId`。
 
 
 
