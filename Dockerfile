@@ -1,14 +1,15 @@
-FROM golang:1.13 AS build-dist
-ENV GOPROXY='https://mirrors.aliyun.com/goproxy'
-WORKDIR /data/release
-COPY . .
-RUN go build
+# 使用 CentOS 作为基础镜像进行生产环境配置
+FROM centos:latest
 
-FROM centos:latest as prod
+# 配置工作目录
 WORKDIR /data/go-websocket
-COPY --from=build-dist /data/release/go-websocket ./
-COPY --from=build-dist /data/release/conf /data/go-websocket/conf
 
-EXPOSE 6000
+# 复制已编译好的二进制文件和配置文件到工作目录
+COPY go-websocket ./
+COPY conf ./conf
 
-CMD ["/data/go-websocket/go-websocket","-c","./conf/app.ini"]
+# 暴露端口
+EXPOSE 7800
+
+# 设置容器启动命令
+CMD ["/data/go-websocket/go-websocket", "-c", "./conf/app.ini"]

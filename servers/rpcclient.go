@@ -2,9 +2,9 @@ package servers
 
 import (
 	"context"
+	"github.com/morpingsss/go-websocket/pkg/setting"
+	"github.com/morpingsss/go-websocket/servers/pb"
 	log "github.com/sirupsen/logrus"
-	"github.com/woodylan/go-websocket/pkg/setting"
-	"github.com/woodylan/go-websocket/servers/pb"
 	"google.golang.org/grpc"
 	"sync"
 )
@@ -64,7 +64,7 @@ func CloseRpcClient(addr string, clientId, systemId string) {
 	}
 }
 
-//绑定分组
+// 绑定分组
 func SendRpcBindGroup(addr string, systemId string, groupName string, clientId string, userId string, extend string) {
 	conn := grpcConn(addr)
 	defer conn.Close()
@@ -82,7 +82,7 @@ func SendRpcBindGroup(addr string, systemId string, groupName string, clientId s
 	}
 }
 
-//发送分组消息
+// 发送分组消息
 func SendGroupBroadcast(systemId string, messageId, sendUserId, groupName string, code int, message string, data *string) {
 	setting.GlobalSetting.ServerListLock.Lock()
 	defer setting.GlobalSetting.ServerListLock.Unlock()
@@ -106,7 +106,7 @@ func SendGroupBroadcast(systemId string, messageId, sendUserId, groupName string
 	}
 }
 
-//发送系统信息
+// 发送系统信息
 func SendSystemBroadcast(systemId string, messageId, sendUserId string, code int, message string, data *string) {
 	setting.GlobalSetting.ServerListLock.Lock()
 	defer setting.GlobalSetting.ServerListLock.Unlock()

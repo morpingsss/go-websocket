@@ -3,9 +3,9 @@ package servers
 import (
 	"encoding/json"
 	"errors"
-	"github.com/woodylan/go-websocket/define"
-	"github.com/woodylan/go-websocket/pkg/etcd"
-	"github.com/woodylan/go-websocket/tools/util"
+	"github.com/morpingsss/go-websocket/define"
+	"github.com/morpingsss/go-websocket/pkg/etcd"
+	"github.com/morpingsss/go-websocket/tools/util"
 	"sync"
 	"time"
 )

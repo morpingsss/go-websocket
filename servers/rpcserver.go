@@ -2,10 +2,10 @@ package servers
 
 import (
 	"context"
+	"github.com/morpingsss/go-websocket/pkg/setting"
+	"github.com/morpingsss/go-websocket/servers/pb"
+	"github.com/morpingsss/go-websocket/tools/util"
 	log "github.com/sirupsen/logrus"
-	"github.com/woodylan/go-websocket/pkg/setting"
-	"github.com/woodylan/go-websocket/servers/pb"
-	"github.com/woodylan/go-websocket/tools/util"
 	"google.golang.org/grpc"
 	"net"
 )
@@ -32,7 +32,7 @@ func (this *CommonServiceServer) CloseClient(ctx context.Context, req *pb.CloseC
 	return &pb.CloseClientReply{}, nil
 }
 
-//添加分组到group
+// 添加分组到group
 func (this *CommonServiceServer) BindGroup(ctx context.Context, req *pb.BindGroupReq) (*pb.BindGroupReply, error) {
 	if client, err := Manager.GetByClientId(req.ClientId); err == nil {
 		//添加到本地
@@ -61,7 +61,7 @@ func (this *CommonServiceServer) Send2System(ctx context.Context, req *pb.Send2S
 	return &pb.Send2SystemReply{}, nil
 }
 
-//获取分组在线用户列表
+// 获取分组在线用户列表
 func (this *CommonServiceServer) GetGroupClients(ctx context.Context, req *pb.GetGroupClientsReq) (*pb.GetGroupClientsReply, error) {
 	response := pb.GetGroupClientsReply{}
 	response.List = Manager.GetGroupClientList(util.GenGroupKey(req.SystemId, req.GroupName))

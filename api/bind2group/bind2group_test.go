@@ -2,8 +2,8 @@ package bind2group
 
 import (
 	"encoding/json"
+	"github.com/morpingsss/go-websocket/pkg/setting"
 	. "github.com/smartystreets/goconvey/convey"
-	"github.com/woodylan/go-websocket/pkg/setting"
 	"io/ioutil"
 	"net/http"
 	"net/http/httptest"

@@ -2,10 +2,10 @@ package log
 
 import (
 	rotatelogs "github.com/lestrrat-go/file-rotatelogs"
+	"github.com/morpingsss/go-websocket/pkg/setting"
 	"github.com/pkg/errors"
 	"github.com/rifflock/lfshook"
 	"github.com/sirupsen/logrus"
-	"github.com/woodylan/go-websocket/pkg/setting"
 	"os"
 	"path/filepath"
 	"strings"
@@ -49,7 +49,7 @@ func Setup() {
 	logrus.AddHook(lfHook)
 }
 
-//获取当前程序运行的文件夹
+// 获取当前程序运行的文件夹
 func getCurrentDirectory() string {
 	dir, _ := filepath.Abs(filepath.Dir(os.Args[0]))
 	return strings.Replace(dir, "\\", "/", -1)

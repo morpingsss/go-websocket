@@ -1,9 +1,9 @@
 # Golang实现的分布式WebSocket微服务
 
 [![Go](https://img.shields.io/badge/Go-1.13-blue.svg)](https://golang.google.cn)
-![GitHub release](https://img.shields.io/github/v/release/woodylan/go-websocket)
-![Travis (.org)](https://api.travis-ci.com/woodylan/go-websocket.svg?branch=master)
-[![star](https://img.shields.io/github/stars/woodylan/go-websocket?style=social)](https://github.com/woodylan/go-websocket/stargazers)
+![GitHub release](https://img.shields.io/github/v/release/morpingsss/go-websocket)
+![Travis (.org)](https://api.travis-ci.com/morpingsss/go-websocket.svg?branch=master)
+[![star](https://img.shields.io/github/stars/morpingsss/go-websocket?style=social)](https://github.com/morpingsss/go-websocket/stargazers)
 
 ## 简介
 
@@ -24,7 +24,7 @@
 
 ## SDK
 
-1. PHP版：https://github.com/woodylan/go-websocket-php-sdk
+1. PHP版：https://github.com/morpingsss/go-websocket-php-sdk
 
 
 
@@ -35,12 +35,12 @@
 
 这里已经打包好了，下载相应的环境，支持Linux、Windows、MacOS环境。
 
-<https://github.com/woodylan/go-websocket/releases>
+<https://github.com/morpingsss/go-websocket/releases>
 
 **你也可以选择自己编译：**
 
 ```shell
-git clone https://github.com/woodylan/go-websocket.git
+git clone https://github.com/morpingsss/go-websocket.git
 ```
 
 **编译：**

@@ -2,10 +2,10 @@ package servers
 
 import (
 	"github.com/gorilla/websocket"
+	"github.com/morpingsss/go-websocket/api"
+	"github.com/morpingsss/go-websocket/define/retcode"
+	"github.com/morpingsss/go-websocket/tools/util"
 	log "github.com/sirupsen/logrus"
-	"github.com/woodylan/go-websocket/api"
-	"github.com/woodylan/go-websocket/define/retcode"
-	"github.com/woodylan/go-websocket/tools/util"
 	"net/http"
 )
 

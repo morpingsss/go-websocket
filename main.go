@@ -2,13 +2,13 @@ package main
 
 import (
 	"fmt"
-	"github.com/woodylan/go-websocket/define"
-	"github.com/woodylan/go-websocket/pkg/etcd"
-	"github.com/woodylan/go-websocket/pkg/setting"
-	"github.com/woodylan/go-websocket/routers"
-	"github.com/woodylan/go-websocket/servers"
-	"github.com/woodylan/go-websocket/tools/log"
-	"github.com/woodylan/go-websocket/tools/util"
+	"github.com/morpingsss/go-websocket/define"
+	"github.com/morpingsss/go-websocket/pkg/etcd"
+	"github.com/morpingsss/go-websocket/pkg/setting"
+	"github.com/morpingsss/go-websocket/routers"
+	"github.com/morpingsss/go-websocket/servers"
+	"github.com/morpingsss/go-websocket/tools/log"
+	"github.com/morpingsss/go-websocket/tools/util"
 	"net"
 	"net/http"
 )
@@ -47,7 +47,7 @@ func initRPCServer() {
 	}
 }
 
-//ETCD注册发现服务
+// ETCD注册发现服务
 func registerServer() {
 	if util.IsCluster() {
 		//注册租约

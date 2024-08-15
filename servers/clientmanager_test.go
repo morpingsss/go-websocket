@@ -2,9 +2,9 @@ package servers
 
 import (
 	"github.com/gorilla/websocket"
+	"github.com/morpingsss/go-websocket/pkg/setting"
+	"github.com/morpingsss/go-websocket/tools/util"
 	. "github.com/smartystreets/goconvey/convey"
-	"github.com/woodylan/go-websocket/pkg/setting"
-	"github.com/woodylan/go-websocket/tools/util"
 	"testing"
 )
 

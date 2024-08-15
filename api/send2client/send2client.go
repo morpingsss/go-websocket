@@ -2,9 +2,9 @@ package send2client
 
 import (
 	"encoding/json"
-	"github.com/woodylan/go-websocket/api"
-	"github.com/woodylan/go-websocket/define/retcode"
-	"github.com/woodylan/go-websocket/servers"
+	"github.com/morpingsss/go-websocket/api"
+	"github.com/morpingsss/go-websocket/define/retcode"
+	"github.com/morpingsss/go-websocket/servers"
 	"net/http"
 )
 

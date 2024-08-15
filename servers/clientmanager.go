@@ -3,10 +3,10 @@ package servers
 import (
 	"encoding/json"
 	"errors"
+	"github.com/morpingsss/go-websocket/define/retcode"
+	"github.com/morpingsss/go-websocket/pkg/setting"
+	"github.com/morpingsss/go-websocket/tools/util"
 	log "github.com/sirupsen/logrus"
-	"github.com/woodylan/go-websocket/define/retcode"
-	"github.com/woodylan/go-websocket/pkg/setting"
-	"github.com/woodylan/go-websocket/tools/util"
 	"sync"
 	"time"
 )
@@ -174,7 +174,7 @@ func (manager *ClientManager) SendMessage2LocalGroup(systemId, messageId, sendUs
 	}
 }
 
-//发送给指定业务系统
+// 发送给指定业务系统
 func (manager *ClientManager) SendMessage2LocalSystem(systemId, messageId string, sendUserId string, code int, msg string, data *string) {
 	if len(systemId) > 0 {
 		clientIds := Manager.GetSystemClientList(systemId)
