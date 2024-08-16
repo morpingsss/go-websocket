@@ -71,7 +71,12 @@ CGO_ENABLED=0 GOOS=darwin GOARCH=amd64 go build
 
 编辑hosts文件  120.79.131.10 websocket.example.com
 
-打开支持Websocket的客户端，输入 `ws://websocket.example.com/ws?systemId=xxx` 进行连接，连接成功会返回`clientId`。
+```shell
+curl -X POST http://websocket.example.com/api/register -H "Content-Type: application/json; charset=UTF-8" -d "{\"systemId\": \"abcd\"}"
+websocat ws://websocket.example.com/ws?systemId=abcd # 这个命令需要新开一个shell
+curl -X POST http://websocket.example.com/api/bind_to_group -H "Content-Type: application/json; charset=UTF-8" -H "systemId: abcd" -d "{\"clientId\": \"$clientId\", \"groupName\": \"abc\"}"
+curl -X POST http://websocket.example.com/api/get_online_list -H "Content-Type: application/json; charset=UTF-8" -H "systemId: abcd" -d "{\"groupName\": \"abc\"}" 
+```
 
 
 
