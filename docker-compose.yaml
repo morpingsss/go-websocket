@@ -71,6 +71,21 @@ services:
     networks:
       - ws-net
 
+  nginx:
+    image: nginx:latest
+    container_name: ws_nginx
+    ports:
+      - "7000:7000"
+    volumes:
+      - ./conf/nginx.conf:/etc/nginx/conf.d  # 确保此路径包含你的 nginx.conf 文件
+      - /path/to/nginx/logs:/logs
+    networks:
+      - ws-net
+    depends_on:
+      - webapp1
+      - webapp2
+      - webapp3
+
 networks:
   ws-net:
     name: ws-net
