@@ -72,7 +72,7 @@ services:
       - ws-net
 
   nginx:
-    image: nginx:latest
+    image: registry.cn-shenzhen.aliyuncs.com/morpingsss/nginx:latest
     container_name: ws_nginx
     ports:
       - "7000:7000"
